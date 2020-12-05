@@ -1,0 +1,102 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  #add the title for our web bar/metta data
+  app_title: My Music Review
+  app_description: A website devoted to uploading and review your music.
+
+
+  show: Show
+  edit: Edit
+  delete: Delete
+  back: Back
+  areyousure: Are you sure?
+
+  error: Error!
+
+  save: Save
+
+  tracks:
+    edit:
+      edittrack: Edit a track
+    new:
+      newtrack: Add a new track
+    index:
+      title: Tracks
+      newtrack: New Track
+
+  reviews:
+    edit:
+      editreview: editing a review
+
+    index:
+      title: Review
+      newreview: Write a new review
+
+  albums:
+    edit:
+      editalbum: Edit an album listing
+    show:
+      addtrack: Add a new Track
+    new:
+      newalbum: New Album
+
+    index:
+      title: Albums
+      newalbum: Create a new album entry
+
+
+
+  #add the text for our home page.
+  home:
+    home:
+      title: My Music Review
+      welcome: Welcome to My Music Review
+      intro: This website is deadicated to allowing users to upload album and then a track listing. They are also able to post their own reviews of each track.
+      #add the text for our contact page.
+    contact:
+      title: Contact Us
+      contact_us: Fill out the form and we may be in touch.
+      # add all the contact details for our contact form.
+      name: "Name:"
+      enter_name: Enter Your Name
+
+      email: "Email: "
+      enter_email: Enter your Email
+
+      telephone: "Telephone"
+      enter_telephone: Enter your Telephone number
+
+      message: "Message: "
+      enter_message: What's up?
+
+      submit: Contact Us
