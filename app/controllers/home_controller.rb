@@ -16,7 +16,7 @@ class HomeController < ApplicationController
       flash[:alert] = I18n.t('home.request_contact.no_email')
     else
 
-    #send email_field_tag
+    ContactMailer.contact_email(email, name, telephone, message).deliver_now
     flash[:notice] = I18n.t('home.request_contact.email_sent')
   end
 
