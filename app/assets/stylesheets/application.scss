@@ -16,3 +16,26 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ $font: 'Helvetica','Arial',sans-serif;
+ $color: #FFFFFF;
+ 
+ body {
+   font-family:$font;
+   background-color:$color;
+   margin: 10px;
+   padding: 10px;
+ }
+
+ h1{
+   text-transform: uppercase;
+   text-align: center;
+   font-weight: bold;
+   vertical-align: middle;
+ }
+
+ p{
+   font-weight: bold;
+   text-align: center;
+   font-size: 150%
+ }
