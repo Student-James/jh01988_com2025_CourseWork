@@ -78,6 +78,10 @@ en:
 
   #add the text for our home page.
   home:
+
+    request_contact:
+      no_email: You must supply a email
+      email_sent: Thank you, we might be in touch. 
     home:
       title: My Music Review
       welcome: Welcome to My Music Review
