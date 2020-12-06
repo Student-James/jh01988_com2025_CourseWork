@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+seedAlbum = Album.where(title: 'Seed title').first
+seedAlbum.delete if seedAlbum
+
+album = Album.create([artist: 'Seed Artist', title: 'Seed title'])
