@@ -14,9 +14,22 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag 'modernizr'
     = csrf_meta_tags
+    %title Bootstrap Example
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"}
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"}
 
   %body
+    // This render allows us to load our header.
+    = render "shared/header"
 
     - flash.each do |key, value|
       = content_tag :div, content_tag(:p, value), id: "{key}" unless value.blank?
+
     = yield
+
+    // Our footer
+    = render "shared/footer"

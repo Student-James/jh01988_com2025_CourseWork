@@ -19,7 +19,7 @@
 
  $font: 'Helvetica','Arial',sans-serif;
  $color: #FFFFFF;
- 
+
  body {
    font-family:$font;
    background-color:$color;
@@ -31,7 +31,7 @@
    text-transform: uppercase;
    text-align: center;
    font-weight: bold;
-   vertical-align: middle;
+    vertical-align: middle;
  }
 
  p{
@@ -39,3 +39,41 @@
    text-align: center;
    font-size: 150%
  }
+
+ /* Add a black background color to the top navigation */
+.topnav {
+ background-color: #000000;
+ overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+ float: left;
+ display: block;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+ background-color: #ddd;
+ color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+ background-color: #808080;
+ color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+ display: none;
+}
+
+td, th{
+  padding: 10px;
+}

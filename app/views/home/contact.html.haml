@@ -1,6 +1,6 @@
 
 //our localised strings for a our contact page title and information.
-%h1= t('.title')
+%h1.jumbotron.text-center= t('.title')
 %p= t('.contact_us')
 // adding the for the users to enter their information.
 = form_tag request_contact_path, method: 'post' do

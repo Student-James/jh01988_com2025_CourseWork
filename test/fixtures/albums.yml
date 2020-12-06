@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  artist: MyString
-  title: MyString
+  artist: Fixture Artist
+  title: Fixture Title 1
 
 two:
-  artist: MyString
-  title: MyString
+  artist: Fixture Artist
+  title: Fixture Title 2

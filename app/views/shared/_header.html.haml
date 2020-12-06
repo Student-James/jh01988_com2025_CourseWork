@@ -1,0 +1,11 @@
+/ Load an icon library to show a hamburger menu (bars) on small screens
+%link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+
+
+#myTopnav.topnav
+  %a.active{:href => "/"} Home
+  %a{:href => "/albums"} Album
+  %a{:href => "/contact"} Contact
+
+  %a.icon{:href => "javascript:void(0);", :onclick => "myFunction()"}
+    %i.fa.fa-bars
