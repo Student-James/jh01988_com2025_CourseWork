@@ -45,9 +45,11 @@ en:
 
   save: Save
 
-  trackCreate: Track was successfully created.
+
 
   tracks:
+    create:
+      trackCreate: Track was successfully created.
     edit:
       edittrack: Edit a track
     new:

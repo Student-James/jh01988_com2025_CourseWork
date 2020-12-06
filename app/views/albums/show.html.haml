@@ -7,6 +7,16 @@
   %b Title:
   = @album.title
 
+  %p Tracks:
+%table
+  %tbody
+    - @album.tracks.each do |track|
+      %tr
+        %td= track.title
+        %td.alert.alert-dark{:role => "alert"}= link_to t('.show'),track
+        %td.alert.alert-success{:role => "alert"}= link_to t('.edit'), edit_track_path(track)
+        %td.alert.alert-danger{:role => "alert"}= link_to t('.destroy'), track, :method => :delete, :data => { :confirm => t('.areyousure')}
+
   %p= link_to t('.addtrack'), new_track_path(album_id: @album)
 
   = link_to t('.edit'), edit_album_path(@album)
