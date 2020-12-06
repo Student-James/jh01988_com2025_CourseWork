@@ -45,6 +45,8 @@ en:
 
   save: Save
 
+  trackCreate: Track was successfully created.
+
   tracks:
     edit:
       edittrack: Edit a track
@@ -81,7 +83,7 @@ en:
 
     request_contact:
       no_email: You must supply a email
-      email_sent: Thank you, we might be in touch. 
+      email_sent: Thank you, we might be in touch.
     home:
       title: My Music Review
       welcome: Welcome to My Music Review

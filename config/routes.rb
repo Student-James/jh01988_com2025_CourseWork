@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tracks
   resources :albums
   #Adding the route to the home page.
   root 'home#home'

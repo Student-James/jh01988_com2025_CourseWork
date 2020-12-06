@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Album:
+  = @track.album.title
+%p
+  %b Title:
+  = @track.title
+
+= link_to t('.edit'), edit_track_path(@track)
+\|
+= link_to t('.back'), tracks_path
