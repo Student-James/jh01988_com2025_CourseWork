@@ -11,11 +11,11 @@
 %table
   %tbody
     - @album.tracks.each do |track|
-      %tr
+      %tr{id: "track_#{track.id}"}
         %td= track.title
         %td.alert.alert-dark{:role => "alert"}= link_to t('.show'),track
         %td.alert.alert-success{:role => "alert"}= link_to t('.edit'), edit_track_path(track)
-        %td.alert.alert-danger{:role => "alert"}= link_to t('.destroy'), track, :method => :delete, :data => { :confirm => t('.areyousure')}
+        %td.alert.alert-danger{:role => "alert"}= link_to t('.destroy'), track, :method => :delete, :data => { :confirm => t('.areyousure')}, :remote =>true
 
   %p= link_to t('.addtrack'), new_track_path(album_id: @album)
 
