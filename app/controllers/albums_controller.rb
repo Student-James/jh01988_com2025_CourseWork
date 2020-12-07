@@ -1,10 +1,11 @@
 class AlbumsController < ApplicationController
   before_action :set_album, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /albums
   # GET /albums.json
   def index
-    @albums = Album.all
+    @albums = Album.user_albums(current_user)
   end
 
   # GET /albums/1
@@ -25,6 +26,7 @@ class AlbumsController < ApplicationController
   # POST /albums.json
   def create
     @album = Album.new(album_params)
+    @album.user = current_user
 
     respond_to do |format|
       if @album.save

@@ -1,11 +1,12 @@
 class TracksController < ApplicationController
   before_action :set_track, only: [:show, :edit, :update, :destroy]
   before_action :set_album, only: [:new, :create]
+  before_action :authenticate_user!
 
   # GET /tracks
   # GET /tracks.json
   def index
-    @tracks = Track.all
+    @tracks = Track.user_tracks(current_user)
   end
 
   # GET /tracks/1
