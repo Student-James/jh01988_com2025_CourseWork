@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :tracks
   resources :albums
   #Adding the route to the home page.

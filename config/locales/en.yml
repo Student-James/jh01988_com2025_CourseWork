@@ -45,6 +45,11 @@ en:
 
   save: Save
 
+  profile: Profile
+  logout: Log Out
+  login: Log In
+  signup: Sign Up
+
 
 
   tracks:

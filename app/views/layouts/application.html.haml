@@ -26,8 +26,7 @@
     // This render allows us to load our header.
     = render "shared/header"
 
-    - flash.each do |key, value|
-      = content_tag :div, content_tag(:p, value), id: "{key}" unless value.blank?
+
 
     = yield
 
