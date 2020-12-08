@@ -1,0 +1,23 @@
+%h1.jumbotron.text-center= t('.title')
+
+%table
+  %thead
+    %tr
+      %th Album
+      %th Reviewtitle
+      %th Reviewbody
+
+
+  %tbody
+    - @reviews.each do |review|
+      %tr
+        %td= review.album
+        %td= review.reviewtitle
+        %td= review.reviewbody
+        %td= link_to t('.show'), review
+        %td= link_to t('.edit'), edit_review_path(review)
+        %td= link_to t('.delete'), review, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to t('.newreview'), new_review_path

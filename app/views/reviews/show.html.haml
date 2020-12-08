@@ -1,0 +1,15 @@
+
+
+%p
+  %b Album:
+  = @review.album.title
+%p
+  %b Reviewtitle:
+  = @review.reviewtitle
+%p
+  %b Reviewbody:
+  = @review.reviewbody
+
+= link_to t('.edit'), edit_review_path(@review)
+\|
+= link_to t('.back'), reviews_path

@@ -54,18 +54,20 @@ en:
 
   tracks:
     create:
-      trackCreate: Track was successfully created.
+      trackCreate: Song was successfully created.
     edit:
-      edittrack: Edit a track
+      edittrack: Edit a songs details
     new:
-      newtrack: Add a new track
+      newtrack: Add a new Song
     index:
-      title: Tracks
-      newtrack: New Track
+      title: Songs
+      newtrack: New Song
 
   reviews:
+    new:
+      newreview: Write a new review about this album
     edit:
-      editreview: editing a review
+      editreview: Edit a review
 
     index:
       title: Review
@@ -76,6 +78,7 @@ en:
       editalbum: Edit an album listing
     show:
       addtrack: Add a new Track
+      addreview: Write a review for this album
     new:
       newalbum: New Album
 

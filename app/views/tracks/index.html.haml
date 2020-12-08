@@ -4,6 +4,7 @@
   %thead
     %tr
       %th Album
+      %th Artist
       %th Title
 
 
@@ -11,6 +12,7 @@
     - @tracks.each do |track|
       %tr
         %td= track.album.title
+        %td= track.album.artist
         %td= track.title
         %td= link_to t('.show'), track
         %td= link_to t('.edit'), edit_track_path(track)
