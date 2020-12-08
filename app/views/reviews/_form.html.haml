@@ -9,6 +9,7 @@
   .field
     = f.label :album
     %p= @review.album.title
+    = f.hidden_field :album_id, value: @review.album.id
   .field
     = f.label :reviewtitle
     = f.text_field :reviewtitle

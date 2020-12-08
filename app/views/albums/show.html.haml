@@ -7,7 +7,7 @@
   %b Title:
   = @album.title
 
-  %p Tracks:
+%p Tracks:
 %table
   %tbody
     - @album.tracks.each do |track|
@@ -18,6 +18,17 @@
         %td.alert.alert-danger{:role => "alert"}= link_to t('.destroy'), track, :method => :delete, :data => { :confirm => t('.areyousure')}, :remote =>true
 
   %p= link_to t('.addtrack'), new_track_path(album_id: @album)
+
+%p Reviews:
+%table
+  %tbody
+    - @album.reviews.each do |review|
+      %tr{id: "review_#{review.id}"}
+        %td= review.reviewtitle
+        %td.alert.alert-dark{:role => "alert"}= link_to t('.show'),review
+        %td.alert.alert-success{:role => "alert"}= link_to t('.edit'), edit_review_path(review)
+        %td.alert.alert-danger{:role => "alert"}= link_to t('.destroy'), review, :method => :delete, :data => { :confirm => t('.areyousure')}, :remote =>true
+
   %p= link_to t('.addreview'), new_review_path(album_id: @album)
 
   = link_to t('.edit'), edit_album_path(@album)

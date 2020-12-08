@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
-    @reviews = Review.all
+    @reviews = Review.user_reviews(current_user)
   end
 
   # GET /reviews/1
@@ -58,6 +58,7 @@ class ReviewsController < ApplicationController
     @review.destroy
     respond_to do |format|
       format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
+      format.js {flash[:notice] = 'Review was successfuly removed.'}
       format.json { head :no_content }
     end
   end
