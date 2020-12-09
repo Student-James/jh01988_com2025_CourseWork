@@ -7,6 +7,7 @@ gem 'bootstrap-sass','~>3.3.6'
 gem 'modernizr-rails'
 gem 'rails-controller-testing'
 gem 'devise'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'

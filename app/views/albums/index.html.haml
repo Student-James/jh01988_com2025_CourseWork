@@ -5,19 +5,17 @@
     %tr
       %th Artist
       %th Title
-      %th
-      %th
-      %th
+
 
   %tbody
     - @albums.each do |album|
       %tr
         %td= album.artist
         %td= album.title
-        %td= link_to 'Show', album
-        %td= link_to 'Edit', edit_album_path(album)
-        %td= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }
-
+        %td.alert.alert-dark{:role => "alert"}= link_to t('.show'), album
+        %td.alert.alert-success{:role => "alert"}= link_to t('.edit'), edit_album_path(album)
+        %td.alert.alert-danger{:role => "alert"}= link_to t('.delete'), album, method: :delete, data: { confirm: 'Are you sure?' }
+        
 %br
 
-= link_to 'New Album', new_album_path
+= link_to t('.newalbum'), new_album_path

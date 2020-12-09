@@ -27,7 +27,7 @@
         %td= review.reviewtitle
         %td.alert.alert-dark{:role => "alert"}= link_to t('.show'),review
         %td.alert.alert-success{:role => "alert"}= link_to t('.edit'), edit_review_path(review)
-        %td.alert.alert-danger{:role => "alert"}= link_to t('.destroy'), review, :method => :delete, :data => { :confirm => t('.areyousure')}, :remote =>true
+        
 
   %p= link_to t('.addreview'), new_review_path(album_id: @album)
 

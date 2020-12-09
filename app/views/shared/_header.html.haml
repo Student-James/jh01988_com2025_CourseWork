@@ -24,5 +24,5 @@
       = '|'
       = link_to t('.signup'), new_user_registration_path
 
-    - flash.each do |key, value|
-      = content_tag :div, content_tag(:p, value), id: "{key}" unless value.blank?
+  - flash.each do |key, value|
+    = content_tag :div, content_tag(:p, value), id: "{key}" unless value.blank?

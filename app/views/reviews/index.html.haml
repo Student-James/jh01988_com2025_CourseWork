@@ -14,10 +14,8 @@
         %td= review.album.title
         %td= review.reviewtitle
         %td= review.reviewbody
-        %td= link_to t('.show'), review
-        %td= link_to t('.edit'), edit_review_path(review)
-        %td= link_to t('.delete'), review, method: :delete, data: { confirm: 'Are you sure?' }
+        %td.alert.alert-dark{:role => "alert"}= link_to t('.show'), review
+        %td.alert.alert-success{:role => "alert"}= link_to t('.edit'), edit_review_path(review)
+        %td.alert.alert-danger{:role => "alert"}= link_to t('.delete'), review, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
-
-= link_to t('.newreview'), new_review_path

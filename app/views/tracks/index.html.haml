@@ -14,10 +14,8 @@
         %td= track.album.title
         %td= track.album.artist
         %td= track.title
-        %td= link_to t('.show'), track
-        %td= link_to t('.edit'), edit_track_path(track)
-        %td= link_to t('.delete'), track, method: :delete, data: { confirm: 'Are you sure?' }
+        %td.alert.alert-dark{:role => "alert"}= link_to t('.show'), track
+        %td.alert.alert-success{:role => "alert"}= link_to t('.edit'), edit_track_path(track)
+        %td.alert.alert-danger{:role => "alert"}= link_to t('.delete'), track, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
-
-= link_to t('.newtrack'), new_track_path
